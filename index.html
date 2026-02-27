@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentation Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Presentation Timer</h1>
+      <p class="subtitle">Track your intro, main talk, and Q&amp;A with visual cues.</p>
+
+      <section class="setup card">
+        <h2>Segment setup (minutes)</h2>
+        <div class="grid">
+          <label>
+            Intro
+            <input id="introInput" type="number" min="0" step="1" value="2" />
+          </label>
+          <label>
+            Main
+            <input id="mainInput" type="number" min="1" step="1" value="10" />
+          </label>
+          <label>
+            Q&amp;A
+            <input id="qaInput" type="number" min="0" step="1" value="3" />
+          </label>
+        </div>
+      </section>
+
+      <section class="timer card">
+        <p id="phaseLabel" class="phase">Ready</p>
+        <p id="timeDisplay" class="time">00:00</p>
+        <p id="progressText" class="progress-text">Press Start to begin.</p>
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="pauseBtn" disabled>Pause</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+      </section>
+
+      <section class="agenda card">
+        <h2>Agenda</h2>
+        <ol id="agendaList"></ol>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
